@@ -15,6 +15,7 @@
 ## Reference
 
 * [Glossary](reference/glossary.md)
+* [Commands](reference/commands.md)
 * [Calculate](reference/calculate.md)
 * [Vector2](reference/vector2.md)
 * [Vector3](reference/vector3.md)

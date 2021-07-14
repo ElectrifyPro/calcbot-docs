@@ -13,7 +13,7 @@ You have arrived at the CalcBot documentation repository, where you can learn ab
 Get started by selecting one of the topics below, or scroll down a bit more to see the quick start guide. Feel free to contact me on Discord \(POOLED\#9848\) or join my **very** chill support server [here](https://discord.com/invite/3m7dK92).
 
 * **CalcBot**
-  * [Commands](commands.md)
+  * [Commands](reference/commands.md)
   * [Settings](settings.md)
   * [Glossary](reference/glossary.md)
 * **Commands**
