@@ -370,20 +370,6 @@ c-calculate arclength 0 4 x*(x-4)
 c-calculate arclength force 0 4 x*(x-4)
 ```
 
-## `c-calculate average`
-
-Calculates the average of two or more numbers.
-
-* **Shorthand**: `c-c avg`
-* **Aliases**: `average`, `avg`
-* **Syntax**:
-	* `c-calculate average <num> <num>...`
-
-**Examples**:
-```
-c-calculate average 1 2 4 5
-```
-
 ## `c-calculate defintegrate`
 
 Calculates the definite integral of an expression. If the integral of the expression could not be computed, an estimation will be provided and marked. If the symbolic integral happens to be computed incorrectly, you can force CalcBot to estimate the definite integral by typing `force` as the first argument.
@@ -630,6 +616,7 @@ Computes various descriptive statistics for two or more numbers, including the m
 ```
 c-calculate stats 1 2 4 5
 c-calculate stats 3*6 11/2 5 5 100/9
+c-calculate stats 1, 2, 5, 8, 9, 9, 40
 ```
 
 ## `c-calculate systemequations`
@@ -1143,7 +1130,7 @@ c-graph viewport 1 xy: 20, gxy: 2
 
 # `c-help`
 
-Get information on how to use a command. For example, to learn about `c-calculate average`, run `c-help calculate average`. All commands have aliases, which are alternative (always shorter) names for commands. You can find them in a command's help embed.
+Get information on how to use a command. For example, to learn about `c-calculate stats`, run `c-help calculate stats`. All commands have aliases, which are alternative (always shorter) names for commands. You can find them in a command's help embed.
 
 For a list of all commands, run `c-help commands`.
 
@@ -1155,7 +1142,7 @@ For a list of all commands, run `c-help commands`.
 **Examples**:
 ```
 c-help 
-c-help calculate average
+c-help calculate stats
 ```
 
 ## `c-help commands`
