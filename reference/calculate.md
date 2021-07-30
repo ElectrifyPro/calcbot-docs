@@ -375,6 +375,21 @@ Returns true if **either** `a` or `b` are **truthy** values.
 0
 ```
 
+### a = b
+
+Assigns the value of `b` to the [**symbol**](glossary.md#symbol) `a`. If `a` isn't a valid symbol, this operation will thrown an error.
+
+```text
+> c-c x = y = 100
+100
+
+> c-c x + y
+200
+
+> c-c 3x + 4 = 0
+Variable names can only consist of letters and underscores.
+```
+
 ## Control flow functions
 
 ### bool\(v\)

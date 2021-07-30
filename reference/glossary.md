@@ -47,6 +47,10 @@ Other commonly used radixes include:
 
 CalcBot supports radix inputs from base 2 to 64. See the calculate [reference](calculate.md#an) to see how to use them.
 
+## Symbol
+
+A symbol is essentially a fancy name for **variable**. Symbol names in CalcBot can only consist of letters and underscores. The word is occasionally used in place of the other and vice versa.
+
 ## Truthiness
 
 Truthiness refers to whether or not a value should be considered **true** or **false**. In CalcBot, all values are automatically considered **true**, except for zero \(and any vector whose components are zero\), which is considered **false**.
