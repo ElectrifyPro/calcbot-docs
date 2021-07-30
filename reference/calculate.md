@@ -95,7 +95,7 @@ Prefix for writing numbers in hexadecimal notation.
 
 ### a'n
 
-\*\*\*\*[**Radix**](glossary.md#radix) notation. This allows you to express a number `n` in any base `a`, from 1 to 64.
+[**Radix**](glossary.md#radix) notation. This allows you to express a number `n` in any base `a`, from 1 to 64.
 
 ```text
 > c-c 2'10000110000
