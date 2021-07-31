@@ -10,6 +10,8 @@ description: c-graph
 
 ![Graph of y=\(x+2\)^2+1 and y=-1/3x+2, showing graph interceptions and other points of interest](../assets/c-g_q_example_2.png)
 
+![Graph of y>=x^2-4 and x=1](../assets/c-g_q_example_3.png)
+
 {% hint style="warning" %}
 ## y=, x=, r=
 
