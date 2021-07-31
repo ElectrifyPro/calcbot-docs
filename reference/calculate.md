@@ -377,7 +377,7 @@ Returns true if **either** `a` or `b` are **truthy** values.
 
 ### a = b
 
-Assigns the value of `b` to the [**symbol**](glossary.md#symbol) `a`. If `a` isn't a valid symbol, this operation will thrown an error.
+Assigns the value of `b` to the [**symbol**](glossary.md#symbol) `a`. If `a` isn't a valid symbol, this operation will throw an error.
 
 ```text
 > c-c x = y = 100
