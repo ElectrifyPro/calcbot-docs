@@ -118,6 +118,36 @@ Prefix for writing numbers in hexadecimal notation.
 
 CalcBot supports the following operators, and evaluates them in the order listed:
 
+### ++a, --a
+
+Add or subtracts 1 from `a`, and assigns the result to `a`. Returns the value of `a` _after_ it was incremented (the value assigned to `a`).
+
+```text
+> c-c x = 2
+2
+
+> c-c ++x
+3
+
+> c-c x
+3
+```
+
+### a++, a--
+
+Add or subtracts 1 from `a`, and assigns the result to `a`. Returns the value of `a` _before_ it was incremented.
+
+```text
+> c-c x = 2
+2
+
+> c-c x++
+2
+
+> c-c x
+3
+```
+
 ### not n
 
 Negates `n`. If `n` is a [**truthy**](glossary.md#truthiness) value, false \(0\) is returned. Otherwise, true \(1\) is returned.
