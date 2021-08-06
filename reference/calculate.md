@@ -259,53 +259,53 @@ Shift all the bits in `a` to the right `b` times. Bits at the end of the number 
 3
 ```
 
-### a is b
+### a == b
 
 Returns true \(1\) if `a` is equal to `b`.
 
 ```text
-> c-c 3 is 1 + 2
+> c-c 3 == 1 + 2
 1
 
-> c-c not false is true
+> c-c not false == true
 1
 ```
 
-### a nis b
+### a != b
 
 Returns true \(1\) if `a` is **not** equal to `b`.
 
 ```text
-> c-c 3 nis 1 + 2
+> c-c 3 != 1 + 2
 0
 
-> c-c re(3i + 2) nis im(3i + 2)
+> c-c re(3i + 2) != im(3i + 2)
 1
 ```
 
-### a ais b
+### a ~== b
 
 Returns true \(1\) if `a` is **approximately** equal to `b`. The difference between them must be less than `1 * 10 ^ -6`. For complex numbers, this operator will compare the real and imaginary components separately.
 
 This operator is intended to be used when comparing the results of certain mathematical operations that produce slightly imprecise results \(like prime notation\).
 
 ```text
-> c-c 3.0000002 ais 3
+> c-c 3.0000002 ~== 3
 1
 
-> c-c 3i + 2 ais 2.9999999i + 2
+> c-c 3i + 2 ~== 2.9999999i + 2
 1
 ```
 
-### a anis b
+### a ~!= b
 
-Negates the behavior of the `ais` operator.
+Negates the behavior of the `~==` operator.
 
 ```text
-> c-c 3 anis 3
+> c-c 3 ~!= 3
 0
 
-> c-c 5i + 2 anis i
+> c-c 5i + 2 ~!= i
 1
 ```
 
@@ -418,6 +418,21 @@ Assigns the value of `b` to the [**symbol**](glossary.md#symbol) `a`. If `a` isn
 
 > c-c 3x + 4 = 0
 Variable names can only consist of letters and underscores.
+```
+
+### a ^= b, a \*= b, a /= b, a %= b, a += b, a -= b, a &lt;&lt;= b, a &gt;&gt;= b, a &= b, a \|= b, a &&= b, a \|\|= b
+
+Compound assignment operators. For example, writing `a ^= b` is a shortcut for writing `a = a ^ b`; writing `a += b` is a shortcut for `a = a + b`, etc. If `a` isn't a valid symbol, this operation will throw an error.
+
+```text
+> c-c x = 24
+24
+
+> c-c x /= 6
+4
+
+> c-c x
+4
 ```
 
 ## Control flow functions
