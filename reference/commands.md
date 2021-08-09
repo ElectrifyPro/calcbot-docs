@@ -158,18 +158,18 @@ Set the bot's prefix used to call commands. (default `c-`)
 c-admin setprefix c-
 ```
 
-# `c-anonfeaturerequest`
+# `c-anonreport`
 
-This command functions the same as `c-featurerequest`, however your username will **not** be displayed in the #feature-request channel on my [support server](https://discord.gg/3m7dK92).
+This command functions the same as `c-report`, however your username will **not** be displayed in the #c-report channel on my [support server](https://discord.gg/3m7dK92).
 
-* **Shorthand**: `c-afq`
-* **Aliases**: `anonfeaturerequest`, `anonfeatrq`, `afq`, `afr`
+* **Shorthand**: `c-arp`
+* **Aliases**: `anonreport`, `anonrep`, `arp`, `are`
 * **Syntax**:
-	* `c-anonfeaturerequest <request | bug>`
+	* `c-anonreport <message>`
 
 **Examples**:
 ```
-c-anonfeaturerequest add inequalities to graphing
+c-anonreport improve matrices
 ```
 
 # `c-bar`
@@ -854,20 +854,6 @@ Calculates the prime factorization of a number.
 **Examples**:
 ```
 c-factor primefactorization 128
-```
-
-# `c-featurerequest`
-
-Make a request for a feature you want to see added to the bot, or report a bug with one of CalcBot's commands. Feature requests are publicly visible at my support server, [here](https://discord.gg/3m7dK92).
-
-* **Shorthand**: `c-fq`
-* **Aliases**: `featurerequest`, `featreq`, `fq`, `fr`
-* **Syntax**:
-	* `c-featurerequest <request | bug>`
-
-**Examples**:
-```
-c-featurerequest add inequalities to graphing
 ```
 
 # `c-formula`
@@ -1831,6 +1817,20 @@ View all of your active reminders.
 
 * **Shorthand**: `c-rem v`
 * **Aliases**: `view`, `list`, `v`, `l`
+
+# `c-report`
+
+Make a request for a feature you want to see added to the bot, or report a bug with one of CalcBot's commands. Reports are publicly visible at my support server, [here](https://discord.gg/3m7dK92).
+
+* **Shorthand**: `c-rp`
+* **Aliases**: `report`, `rep`, `rp`, `re`
+* **Syntax**:
+	* `c-report <message>`
+
+**Examples**:
+```
+c-report improve matrices
+```
 
 # `c-scatter`
 

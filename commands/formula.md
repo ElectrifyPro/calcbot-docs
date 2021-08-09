@@ -4,7 +4,7 @@ description: c-formula
 
 # Formula
 
-`c-formula` allows you to access common formulas used in math and solve for the unknowns in those formulas. The full list of formulas you can use is available at the bottom of this page. You can suggest a new formula to be added with the `c-featurerequest` command.
+`c-formula` allows you to access common formulas used in math and solve for the unknowns in those formulas. The full list of formulas you can use is available at the bottom of this page. You can suggest a new formula to be added with the `c-report` command.
 
 Here is a nice GIF that demonstrates the use of `c-formula` to solve for a variable:
 

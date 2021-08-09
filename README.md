@@ -66,7 +66,7 @@ Enabling these permissions will enhance CalcBot's functionality, however they ar
 
 ## Does something confuse you or not work the way you expect?
 
-Please use the `c-featurerequest` / `c-anonfeaturerequest` command, or come let me know at my [support server](https://discord.com/invite/3m7dK92)! It's incredibly easy and takes less than 10 seconds to let me know of problems. However, very few users generally make reports, leading me to believe CalcBot is flawless, which definitely isn't true \(yet\).
+Please use the `c-report` / `c-anonreport` command, or come let me know at my [support server](https://discord.com/invite/3m7dK92)! It's incredibly easy and takes less than 10 seconds to let me know of problems. However, very few users generally make reports, leading me to believe CalcBot is flawless, which definitely isn't true \(yet\).
 
 Please also be as detailed as you can in your request / report, since I unfortunately don't possess mind-reading abilities \(yet\). One of my old requests came from a user not in my support server and it simply read "make the graphs interactive". As you can imagine, this request remains unfulfilled.
 
@@ -78,7 +78,7 @@ That isn't a question, but a lot of things could've gone wrong if this happens. 
 
 ### CalcBot gives an incorrect answer for a command.
 
-That also isn't a question, but what?? Report it with `c-featurerequest / c-anonfeaturerequest`, fast!
+That also isn't a question, but what?? Report it with `c-report / c-anonreport`, fast!
 
 ### Do you actually implement users' feature requests?
 
