@@ -518,8 +518,8 @@ c-calculate limit -3 -7<=x<=-3 : sqrt(7+x) : x>-3 : x^2-5
 
 View or set the angle calculation mode of the calculator. (default **radians**)
 
-* **Shorthand**: `c-c m`
-* **Aliases**: `mode`, `m`
+* **Shorthand**: `c-c mode`
+* **Aliases**: `mode`
 
 **Examples**:
 ```
