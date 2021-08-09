@@ -1171,17 +1171,30 @@ Each set of values enclosed in brackets represents a row in the matrix.
 
 ## `c-matrix gaussian`
 
-Solve a system of linear equations through gaussian elimination.
+Performs gaussian elimination on the given matrix, and returns the result in reduced row echelon form.
 
 * **Shorthand**: `c-m gau`
 * **Aliases**: `gaussian`, `gauss`, `gau`
 * **Syntax**:
-	* `c-matrix gaussian <matrix>`
-	* `c-matrix gaussian <r1> <r2>...`
+	* `c-matrix gaussian <row 1> <row 2>...`
 
 **Examples**:
 ```
 c-matrix gaussian [2, 1, 7] [3, -2, -7]
+```
+
+## `c-matrix multiply`
+
+Multiplies two matrices.
+
+* **Shorthand**: `c-m mul`
+* **Aliases**: `multiply`, `mult`, `mul`
+* **Syntax**:
+	* `c-matrix multiply <matrix 1> <matrix 2>`
+
+**Examples**:
+```
+c-matrix multiply [[1, -2, 1] [2, 1, 3]] [[2, 1] [3, 2] [1, 1]]
 ```
 
 # `c-notmath`
