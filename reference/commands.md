@@ -1068,6 +1068,7 @@ c-graph quick y=x^2
 c-graph quick x-sqrt(y)=1
 c-graph quick x*y=16
 c-graph quick r=3sin(theta)
+c-graph quick y>=x^2-4
 ```
 
 ## `c-graph quickviewport`
