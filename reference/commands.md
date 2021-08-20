@@ -19,6 +19,7 @@ A set of commands only accessible to server admins.
 ## `c-admin channellist`
 
 **Admin only**
+
 Display all text channels and whether they are enabled or disabled.
 
 * **Shorthand**: `c-adm cl`
@@ -27,6 +28,7 @@ Display all text channels and whether they are enabled or disabled.
 ## `c-admin cleardeleted`
 
 **Admin only**
+
 Remove the specified amount of deleted messages stored with `c-recollect deleted`. The oldest messages are deleted, retaining the newest ones.
 
 * **Shorthand**: `c-adm cd`
@@ -42,6 +44,7 @@ c-admin cleardeleted 2
 ## `c-admin clearedited`
 
 **Admin only**
+
 Remove the specified amount of edited messages stored with `c-recollect edited`. The oldest messages are deleted, retaining the newest ones.
 
 * **Shorthand**: `c-adm ce`
@@ -57,6 +60,7 @@ c-admin clearedited 2
 ## `c-admin customratio`
 
 **Admin only**
+
 Create server-wide custom ratios for the unit conversion calculator. If there are collisions between user and server custom ratios, the user ratios will be used first.
 
 * **Shorthand**: `c-adm c`
@@ -108,12 +112,13 @@ c-admin customratio edit 1.008 g:H/mol 2.016 g:H2/mol
 
 Display all server-wide custom ratios.
 
-* **Shorthand**: `c-adm c v`
+* **Shorthand**: `c-adm c l`
 * **Aliases**: `view`, `list`, `v`, `l`
 
 ## `c-admin disablechannel`
 
 **Admin only**
+
 Set the specified text channels to `disabled` status, preventing CalcBot from sending messages in that channel.
 
 * **Shorthand**: `c-adm dc`
@@ -129,6 +134,7 @@ c-admin disablechannel #general
 ## `c-admin enablechannel`
 
 **Admin only**
+
 Set the specified text channels to `enabled` status, allowing CalcBot to send messages in that channel.
 
 * **Shorthand**: `c-adm ec`
@@ -144,6 +150,7 @@ c-admin enablechannel #general
 ## `c-admin setprefix`
 
 **Admin only**
+
 Set the bot's prefix used to call commands. (default `c-`)
 
 **This server's prefix: `c-`**
@@ -162,7 +169,7 @@ c-admin setprefix c-
 
 This command functions the same as `c-report`, however your username will **not** be displayed in the #c-report channel on my [support server](https://discord.gg/3m7dK92).
 
-* **Shorthand**: `c-arp`
+* **Shorthand**: `c-are`
 * **Aliases**: `anonreport`, `anonrep`, `arp`, `are`
 * **Syntax**:
 	* `c-anonreport <message>`
@@ -230,7 +237,7 @@ c-bar clearcolumns 1 column name, column name 2
 
 Create a new bar graph with the specified initial column(s) and amount(s). You may enter multiple columns and amounts separated by commas.
 
-* **Shorthand**: `c-b i`
+* **Shorthand**: `c-b a`
 * **Aliases**: `create`, `init`, `add`, `cr`, `i`, `a`
 * **Syntax**:
 	* `c-bar create <initial column> : <initial amount>...`
@@ -287,14 +294,14 @@ c-bar increment 1 column name : pi
 
 View a list of bar graphs you created with `c-bar create`.
 
-* **Shorthand**: `c-b l`
+* **Shorthand**: `c-b v`
 * **Aliases**: `list`, `view`, `l`, `v`
 
 ## `c-bar option`
 
 Change an option of a bar graph you created with `c-bar create`. The options you can change are:
 
-`showExtras` - Add an extra **Average** and **Sum** column to your graph during rendering.
+* `showExtras` - Add an extra **Average** and **Sum** column to your graph during rendering.
 
 * **Shorthand**: `c-b o`
 * **Aliases**: `option`, `op`, `o`
@@ -374,7 +381,7 @@ c-calculate arclength force 0 4 x*(x-4)
 
 Calculates the definite integral of an expression. If the integral of the expression could not be computed, an estimation will be provided and marked. If the symbolic integral happens to be computed incorrectly, you can force CalcBot to estimate the definite integral by typing `force` as the first argument.
 
-* **Shorthand**: `c-c din`
+* **Shorthand**: `c-c nin`
 * **Aliases**: `defintegrate`, `numintegrate`, `definteg`, `numinteg`, `din`, `nin`
 * **Syntax**:
 	* `c-calculate defintegrate [force] <low bound> <high bound> <variable> <expression>`
@@ -727,7 +734,7 @@ c-chemistry elementinfo hydrogen
 
 Searches for chemical compounds that match the given constraints.
 
-* **Shorthand**: `c-ch lo`
+* **Shorthand**: `c-ch se`
 * **Aliases**: `lookup`, `search`, `look`, `sear`, `lo`, `se`
 * **Syntax**:
 	* `c-chemistry lookup <formula | element name | symbol | atomic number>...`
@@ -968,7 +975,7 @@ c-graph clearpoints 1 all
 
 Create a new graph with the specified initial expression(s) and (optionally) point(s). You may enter multiple expressions and points separated by commas.
 
-* **Shorthand**: `c-g i`
+* **Shorthand**: `c-g a`
 * **Aliases**: `create`, `init`, `add`, `cr`, `i`, `a`
 * **Syntax**:
 	* `c-graph create <initial expressions>... [: <initial points>...]`
@@ -1012,16 +1019,16 @@ c-graph draw 1
 
 View a list of graphs you created with `c-graph create`.
 
-* **Shorthand**: `c-g l`
+* **Shorthand**: `c-g v`
 * **Aliases**: `list`, `view`, `l`, `v`
 
 ## `c-graph option`
 
 Change an option of a graph you created with `c-graph create`. The options you can change are:
 
-`autoViewport` - Automatically move the viewport so that all points of interest are visible.
-`pointsOfInterest` - Draw points at function interceptions, as well as y-intercepts and x-intercepts.
-`expressionDerivatives` - Draw the derivative of each function.
+* `autoViewport` - Automatically move the viewport so that all points of interest are visible.
+* `pointsOfInterest` - Draw points at function interceptions, as well as y-intercepts and x-intercepts.
+* `expressionDerivatives` - Draw the derivative of each function.
 
 * **Shorthand**: `c-g o`
 * **Aliases**: `option`, `op`, `o`
@@ -1093,13 +1100,15 @@ c-graph trace 1 pi/2
 ## `c-graph viewport`
 
 Change the viewport settings (zoom and positioning) of a graph you created with `c-graph create`. For example, to change the center of the viewport, type `cam: (x, y)` with the position of the new center. To change the axes scale, type `x: [distance from center to side]` or `y: [distance from center to side]` to describe the scale you want. You may leave out any settings you don't want to change. Type `reset` to reset the settings to their defaults.
+
 Note: You can set the `gx`, `gy` or `gxy` properties to 0, and CalcBot will automatically determine a grid scale.
+
 **Properties**:
-`cam` = `(number, number)` = center of viewport
-`x`, `y` = `number` = axes scales
-`xy` = modifies both `x` and `y`
-`gx`, `gy` = `number` = grid scales
-`gxy` = modifies both `gx` and `gy`
+* `cam` = `(number, number)` = center of viewport
+* `x`, `y` = `number` = axes scales
+* `xy` = modifies both `x` and `y`
+* `gx`, `gy` = `number` = grid scales
+* `gxy` = modifies both `gx` and `gy`
 
 * **Shorthand**: `c-g vp`
 * **Aliases**: `viewport`, `vp`
@@ -1369,7 +1378,9 @@ c-notmath unscramble itonnnive
 # `c-polynomial`
 
 A module for performing single-variable polynomial math. Polynomials are to be inputted with a syntax similar to:
-```Ax^2+Bx+C```
+```
+Ax^2+Bx+C
+```
 Any amount of terms / degree can be used.
 
 * **Shorthand**: `c-p`
@@ -1453,7 +1464,9 @@ c-polynomial rationalroots 3672 3450
 # `c-radical`
 
 A module for working with radicals. Radicals should be inputted using the following syntax:
-```<coefficient>[<index>](<radicand>)```
+```
+<coefficient>[<index>](<radicand>)
+```
 For example, `4[2](5)` means 4 times the square root of 5.
 
 * **Shorthand**: `c-r`
@@ -1528,7 +1541,7 @@ c-recollect edited 2
 
 ## `c-recollect mark`
 
-Given the link to a message  message link / ID, along with the ID of the channel it appears in (optional if in the same channel as the message), mark it as **important** to CalcBot. If the message is deleted or edited, CalcBot will capture the changes and make them visible in `c-recollect`.
+Given a message link / ID, along with the ID of the channel it appears in (optional if in the same channel as the message), mark it as **important** to CalcBot. If the message is deleted or edited, CalcBot will capture the changes and make them visible in `c-recollect`.
 
 Note that all messages are marked automatically, except for messages that were sent before CalcBot restarted.
 
@@ -1815,14 +1828,14 @@ Resume a specified reminder by its reminder ID. You can view your reminders and 
 
 View all of your active reminders.
 
-* **Shorthand**: `c-rem v`
+* **Shorthand**: `c-rem l`
 * **Aliases**: `view`, `list`, `v`, `l`
 
 # `c-report`
 
 Make a request for a feature you want to see added to the bot, or report a bug with one of CalcBot's commands. Reports are publicly visible at my support server, [here](https://discord.gg/3m7dK92).
 
-* **Shorthand**: `c-rp`
+* **Shorthand**: `c-re`
 * **Aliases**: `report`, `rep`, `rp`, `re`
 * **Syntax**:
 	* `c-report <message>`
@@ -1927,8 +1940,8 @@ A set of commands accessible to all users to customize CalcBot's behavior.
 
 The `calc_in` setting determines how your input for `c-calculate` is parsed. This setting will also affect the input settings of certain commands across CalcBot, like `c-vector define`. These are the list of available modes:
 
-`dec` (default) - Decimal numbers are represented with a period / dot (`.`); function parameters are separated by commas (`,`)
-`com` - Decimal numbers are represented with a comma (`,`); function parameters are separated by periods / dots (`.`)
+* `dec` (default) - Decimal numbers are represented with a period / dot (`.`); function parameters are separated by commas (`,`)
+* `com` - Decimal numbers are represented with a comma (`,`); function parameters are separated by periods / dots (`.`)
 
 **Your current setting**: `{setting}`
 
@@ -1941,10 +1954,10 @@ The `calc_in` setting determines how your input for `c-calculate` is parsed. Thi
 
 The `calc_out` setting determines how results in `c-calculate` are formatted. This setting will also affect the results of certain commands across CalcBot, like `c-unitconvert`. These are the list of available modes:
 
-`auto` (default) - Displays all numbers as decimals, switching to scientific / imaginary notation as needed
-`scin` - Displays all numbers in scientific notation
-`frac` - Displays all numbers as a fraction
-`word` - Displays all numbers in word form
+* `auto` (default) - Displays all numbers as decimals, switching to scientific / imaginary notation as needed
+* `scin` - Displays all numbers in scientific notation
+* `frac` - Displays all numbers as a fraction
+* `word` - Displays all numbers in word form
 
 **Your current setting**: `{setting}`
 
@@ -1957,13 +1970,12 @@ The `calc_out` setting determines how results in `c-calculate` are formatted. Th
 
 The `locale` setting determines how dates (in the `c-recollect` commands) are rendered. The default is `en-US`, signifying the English language as used in the USA. Here are examples and useful links to find your specific locale:
 
-`en-GB` - English as used in Great Britain
-`vi-VN` - Vietnamese language as used in Vietnam
-`ko-KR` - Korean language as used in South Korea
-
-[JavaScript locale syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation)
-[ISO 639-1 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
-[ISO 3166-1 alpha-2 country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
+* `en-GB` - English as used in Great Britain
+* `vi-VN` - Vietnamese language as used in Vietnam
+* `ko-KR` - Korean language as used in South Korea
+* [JavaScript locale syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation)
+* [ISO 639-1 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+* [ISO 3166-1 alpha-2 country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
 
 **Your current setting**: `{setting}`
 
@@ -2060,7 +2072,7 @@ c-unitconvert customratio edit 1.008 g:H/mol 2.016 g:H2/mol
 
 Display all created custom ratios.
 
-* **Shorthand**: `c-uc c v`
+* **Shorthand**: `c-uc c l`
 * **Aliases**: `view`, `list`, `v`, `l`
 
 ## `c-unitconvert units`
@@ -2293,7 +2305,7 @@ c-vector3 component 1 4 6 2 5 1
 
 Calculates the cross product of two vectors. Defined vectors are automatically temporarily converted to their component form for this calculation.
 
-* **Shorthand**: `c-v3 cr`
+* **Shorthand**: `c-v3 cp`
 * **Aliases**: `crossproduct`, `cross`, `cr`, `cp`
 * **Syntax**:
 	* `c-vector3 crossproduct <vector 1> <vector 2>`
