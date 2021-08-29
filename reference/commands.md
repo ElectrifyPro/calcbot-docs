@@ -119,15 +119,17 @@ Display all server-wide custom ratios.
 
 **Admin only**
 
-Set the specified text channels to `disabled` status, preventing CalcBot from sending messages in that channel.
+Set the specified text channels to `disabled` status, preventing CalcBot from sending messages in that channel. Type `all` to disable all channels (except for this one).
 
 * **Shorthand**: `c-adm dc`
 * **Aliases**: `disablechannel`, `disablech`, `dc`
 * **Syntax**:
-	* `c-admin disablechannel <channel>...`
+	* `c-admin disablechannel all`
+	* `c-admin disablechannel <channel name | channel id>...`
 
 **Examples**:
 ```
+c-admin disablechannel all
 c-admin disablechannel #general
 ```
 
@@ -135,16 +137,38 @@ c-admin disablechannel #general
 
 **Admin only**
 
-Set the specified text channels to `enabled` status, allowing CalcBot to send messages in that channel.
+Set the specified text channels to `enabled` status, allowing CalcBot to send messages in that channel. Type `all` to enable all channels.
 
 * **Shorthand**: `c-adm ec`
 * **Aliases**: `enablechannel`, `enablech`, `ec`
 * **Syntax**:
-	* `c-admin enablechannel <channel>...`
+	* `c-admin enablechannel all`
+	* `c-admin enablechannel <channel name | channel id>...`
 
 **Examples**:
 ```
+c-admin enablechannel all
 c-admin enablechannel #general
+```
+
+## `c-admin markchannel`
+
+**Admin only**
+
+Mark the specified text channels. Marked channels will be tracked for message deletions and edits for the `c-recollect` commands.
+
+Note that all channels are unmarked by default.
+
+* **Shorthand**: `c-adm mc`
+* **Aliases**: `markchannel`, `markch`, `mc`
+* **Syntax**:
+	* `c-admin markchannel all`
+	* `c-admin markchannel <channel name | channel id>...`
+
+**Examples**:
+```
+c-admin markchannel all
+c-admin markchannel #general
 ```
 
 ## `c-admin setprefix`
@@ -163,6 +187,26 @@ Set the bot's prefix used to call commands. (default `c-`)
 **Examples**:
 ```
 c-admin setprefix c-
+```
+
+## `c-admin unmarkchannel`
+
+**Admin only**
+
+Unmark the specified text channels. Unmarked channels will **not** be tracked for message deletions and edits for the `c-recollect` commands.
+
+Note that all channels are unmarked by default.
+
+* **Shorthand**: `c-adm uc`
+* **Aliases**: `unmarkchannel`, `unmarkch`, `um`, `uc`
+* **Syntax**:
+	* `c-admin unmarkchannel all`
+	* `c-admin unmarkchannel <channel name | channel id>...`
+
+**Examples**:
+```
+c-admin unmarkchannel all
+c-admin unmarkchannel #general
 ```
 
 # `c-anonreport`
@@ -657,7 +701,7 @@ c-calculate tangentline 0 (x-4)(x+2)^2
 
 ## `c-calculate tofraction`
 
-Convert an expression to a fraction, or reduce a fraction to its minimum. Entering any value for the [mixed] argument will show the result in mixed fraction form (if possible).
+Convert an expression to a fraction, or reduce a fraction to its minimum. Entering the word "mixed" for the `mixed` argument will show the result in mixed fraction form (if possible).
 You may specify repeating sections of a result by enclosing it in parenthesis:
 ```0.(142857) = 1/7```
 
@@ -1541,7 +1585,7 @@ c-recollect edited 2
 
 ## `c-recollect mark`
 
-Given a message link / ID, along with the ID of the channel it appears in (optional if in the same channel as the message), mark it as **important** to CalcBot. If the message is deleted or edited, CalcBot will capture the changes and make them visible in `c-recollect`.
+Given a message link / ID, along with the ID of the channel it appears in (optional if in the same channel as the message), mark it as **important** to CalcBot. If the message is deleted or edited, CalcBot will capture the changes and make them visible in `c-recollect`. **The channel itself must be marked in order to mark messages within it.**
 
 Note that all messages are marked automatically, except for messages that were sent before CalcBot restarted.
 
@@ -1550,7 +1594,7 @@ Note that all messages are marked automatically, except for messages that were s
 * **Syntax**:
 	* `c-recollect mark <message link>`
 	* `c-recollect mark <message id (in current channel)>`
-	* `c-recollect mark <channel id> <message id>`
+	* `c-recollect mark <channel name | channel id> <message id>`
 
 **Examples**:
 ```
@@ -1563,12 +1607,12 @@ Given a message link / ID, along with the ID of the channel it appears in (optio
 
 Note that all messages are marked automatically, except for messages that were sent before CalcBot restarted.
 
-* **Shorthand**: `c-rc um`
-* **Aliases**: `unmark`, `um`
+* **Shorthand**: `c-rc u`
+* **Aliases**: `unmark`, `um`, `u`
 * **Syntax**:
 	* `c-recollect unmark <message link>`
 	* `c-recollect unmark <message id (in current channel)>`
-	* `c-recollect unmark <channel id> <message id>`
+	* `c-recollect unmark <channel name | channel id> <message id>`
 
 **Examples**:
 ```
@@ -1701,7 +1745,7 @@ c-regression power [1/2, 1, 2, 4] [3, 4, 1, 1/2]
 
 Set a reminder with an optional message for a specified interval. You can find the available time units with `c-unitconvert units`. You can view your reminders and their IDs with `c-remind view`. Check the **children commands** field above to see the various ways you can interact with reminders.
 
-For reminders (set in servers) that are 2 minutes or longer, members can react on the reminder message with the ⏰ emoji in order to receive the reminder with you. CalcBot will count the reactions of all users excepts bots and the reminder's author.
+For reminders (set in servers) that are 2 minutes or longer, members can click the `Remind me` button on the reminder message in order to receive the reminder with you.
 
 * **Shorthand**: `c-rem`
 * **Aliases**: `remind`, `rem`
@@ -2380,7 +2424,7 @@ c-vector3 deleteall y
 
 ## `c-vector3 directionangle`
 
-Returns the direction angle of the vector with the specified axis (`x`, `y`, `z`).
+Returns the direction angle of the vector about the specified axis (`x`, `y`, `z`).
 
 * **Shorthand**: `c-v3 da`
 * **Aliases**: `directionangle`, `dirangle`, `dirang`, `dang`, `dir`, `da`
