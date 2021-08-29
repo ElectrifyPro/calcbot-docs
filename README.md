@@ -85,5 +85,5 @@ I've implemented and fixed many feature requests and reports by users! All featu
 
 ### Add inequalities to graphing.
 
-I see what you did there
+I already did
 
