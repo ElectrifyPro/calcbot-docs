@@ -269,7 +269,7 @@ Simplify an algebraic expression:
 2*sqrt(262)
 ```
 
-Reacting on the response message with the :books: \(📚\) emoji will display a list of steps taken to reach the result:
+Clicking the show steps button on the response message will display a list of steps taken to reach the result:
 
 ```text
 > c-calculate simplify sqrt(1048)

@@ -61,8 +61,7 @@ Here is a list of permissions CalcBot needs to operate properly:
 
 Enabling these permissions will enhance CalcBot's functionality, however they are **not** required:
 
-* **Manage messages** - This allows CalcBot to delete user messages as they provide input while using the `c-formula` command to save space, and allows CalcBot to remove a user's reactions on CalcBot's messages described in the **Add reactions** permission.
-* **Add reactions** - This allows CalcBot to add reactions to its help messages / messages. Users can react with the same reactions to delete a message, scroll through command pages, etc.
+* **Manage messages** - This allows CalcBot to delete user messages as they provide input while using the `c-formula` command to save space.
 
 ## Does something confuse you or not work the way you expect?
 
