@@ -1902,7 +1902,7 @@ Note that the trigonometric functions are affected by the calculation mode (e.g,
 
 # `c-sequence`
 
-Predicts the next number in an arithmetic / geometric sequence. Extra commands are available for finding the sum of several terms of an expression, etc.
+Predicts the next number in an arithmetic / geometric sequence. Extra commands are available for finding the sum of several terms of an expression, listing the terms of the sequence, etc., etc.
 
 * **Shorthand**: `c-s`
 * **Aliases**: `sequence`, `seq`, `s`
@@ -1916,18 +1916,18 @@ c-sequence 1 3 6 10 15
 
 ## `c-sequence makearithmetic`
 
-Given the first term and common difference of a sequence, calculate the formula for the arithmetic sequence. Or, given two values and where they lie in an arithmetic sequence, calculate the formula for the sequence and the terms in between. For example:
+Given the first term and common difference of a sequence, or two values and where they lie in an arithmetic sequence, calculate the general formula for the arithmetic sequence. For example:
 `c-sequence makearithmetic 1 4 4 15` = find the formula for a sequence whose first term is 4, and fourth term is 15
 
 * **Shorthand**: `c-s ma`
 * **Aliases**: `makearithmetic`, `ma`
 * **Syntax**:
-	* `c-sequence makearithmetic <first term> <common difference> [number of terms]`
+	* `c-sequence makearithmetic <first term> <common difference>`
 	* `c-sequence makearithmetic <start location> <start value> <end location> <end value>`
 
 **Examples**:
 ```
-c-sequence makearithmetic 2 -2 40
+c-sequence makearithmetic 2 -2
 c-sequence makearithmetic 1 4 4 15
 ```
 
@@ -1947,7 +1947,7 @@ c-sequence sum 1 24 5n-3
 
 ## `c-sequence terms`
 
-Displays the terms between the <start location> and <end location> of the given expression in terms of `n`.
+Displays the terms between the <start location> and <end location> of the given expression in terms of `n`. Up to 30 terms are shown at a time.
 
 * **Shorthand**: `c-s t`
 * **Aliases**: `terms`, `t`
