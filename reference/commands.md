@@ -1628,16 +1628,16 @@ A module to work with regular expressions.
 
 ## `c-regex match`
 
-Tries matching a regular expression against a string. The regular expression must be surrounded with `$`.
+Displays all regular expression matches and groups against a string.
 
 * **Shorthand**: `c-re m`
 * **Aliases**: `match`, `m`
 * **Syntax**:
-	* `c-regex match $<regex>$ <string>`
+	* `c-regex match /<regex>/ <string>`
 
 **Examples**:
 ```
-c-regex match $.+$ everything
+c-regex match /.+/ matches everything
 ```
 
 ## `c-regex replace`
@@ -1647,11 +1647,11 @@ Replaces all regular expression matches against a string with a substitution exp
 * **Shorthand**: `c-re r`
 * **Aliases**: `replace`, `rep`, `r`
 * **Syntax**:
-	* `c-regex replace $<regex>$ $<substitution>$ <string>`
+	* `c-regex replace /<regex>/ /<substitution>/ <string>`
 
 **Examples**:
 ```
-c-regex replace $[abc]$ $o$ replace every a, b, or c with an o
+c-regex replace /[aeiou]/ /o/ replace every vowel in this phrase with an o
 ```
 
 # `c-regression`

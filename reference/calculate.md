@@ -668,21 +668,27 @@ Inverse functions of `csch(angle)`, `sech(angle)`, and `coth(angle)` respectivel
 
 ## Degree / radian conversion
 
-### dtr\(degree\)
+### dtr\(degree\), rad\(degree\)
 
 Returns the given value converted to radians.
 
 ```text
 > c-c dtr(180)
 3.141592653589793
+
+> c-c rad(180)
+3.141592653589793
 ```
 
-### rtd\(radian\)
+### rtd\(radian\), deg\(radian\)
 
 Returns the given value converted to degrees.
 
 ```text
 > c-c rtd(pi)
+180
+
+> c-c deg(pi)
 180
 ```
 
