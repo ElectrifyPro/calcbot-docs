@@ -846,23 +846,16 @@ c-dictionary 안녕 ko
 
 # `c-factor`
 
-A small module for factoring numbers.
+Lists the factors of a number.
 
 * **Shorthand**: `c-fac`
 * **Aliases**: `factor`, `fac`
-
-## `c-factor factors`
-
-Lists the factors of a number.
-
-* **Shorthand**: `c-fac list`
-* **Aliases**: `factors`, `list`
 * **Syntax**:
-	* `c-factor factors <number>`
+	* `c-factor <number>`
 
 **Examples**:
 ```
-c-factor factors 128
+c-factor 128
 ```
 
 ## `c-factor greatestcommonfactor`
