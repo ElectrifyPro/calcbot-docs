@@ -747,6 +747,18 @@ Inverse function of `exp(x)`. Equivalent to the logarithmic function with base `
 
 ## Root / power functions
 
+### hypot\(a, b\)
+
+Returns the hypotenuse of a right triangle whose legs are `a` and `b`, formally the square root of the sum of squares of `a` and `b`, that is `sqrt(a^2 + b^2)`.
+
+```text
+> c-c hypot(3, 4)
+5
+
+> c-c hypot(12, 5)
+13
+```
+
 ### sqrt\(n\)
 
 Returns the square root of `n`.
