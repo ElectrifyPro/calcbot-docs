@@ -856,6 +856,64 @@ Returns the `n`th term of the Fibonacci sequence.
 21
 ```
 
+## Statistics
+
+### ncr\(n, k\)
+
+Combinations function. Returns the coefficient of the term `x ^ k` in the polynomial expansion of the binomial `(1 + x) ^ n`. This is also the number in row `n` column `k` of Pascal's triangle.
+
+```text
+> c-c ncr(8, 2)
+28
+```
+
+### npr\(n, r\)
+
+Permutations function. Computes the number of ways to obtain an ordered subset of `r` elements from a set of `n` elements.
+
+```text
+> c-c npr(8, 2)
+56
+```
+
+## Probability
+
+### geompdf\(p, n\)
+
+Geometric probability function. Computes the probability that the first success of an event, with success probability `p`, occurs on the `n`th trial.
+
+```text
+> c-c geompdf(0.2, 8)
+0.04194304
+```
+
+### geomcdf\(p, n\)
+
+Cumulative geometric probability function. Computes the probability that the first success of an event, with success probability `p`, occurs on or before the `n`th trial.
+
+```text
+> c-c geomcdf(0.1, 30)
+0.9576088417247837
+```
+
+### binompdf\(n, p, x\)
+
+Binomial probability function. Computes the probability of exactly `x` successes of an event, with success probability `p`, occurring out of `n` total trials.
+
+```text
+> c-c binompdf(4, 0.6, 3)
+0.3456
+```
+
+### binomcdf\(n, p, x\)
+
+Cumulative binomial probability function. Computes the probability of `x` or fewer success of an event, with success probability `p`, occurring out of `n` total trials.
+
+```text
+> c-c binomcdf(3, 0.2, 2)
+0.992
+```
+
 ## Miscellaneous functions
 
 ### erf\(z\)
@@ -917,24 +975,6 @@ Returns the gamma function of `n` using Lanczos's approximation.
 
 > c-c gamma(3i + 4)
 -1.511251952289958i - 1.1294284935320542
-```
-
-### ncr\(n, k\)
-
-Combinations function. Returns the coefficient of the term `x ^ k` in the polynomial expansion of the binomial `(1 + x) ^ n`. This is also the number in row `n` column `k` of Pascal's triangle.
-
-```text
-> c-c ncr(8, 2)
-28
-```
-
-### npr\(n, r\)
-
-Permutations function. Computes the number of ways to obtain an ordered subset of `r` elements from a set of `n` elements.
-
-```text
-> c-c npr(8, 2)
-56
 ```
 
 ### abs\(n\)
