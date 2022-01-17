@@ -1194,12 +1194,26 @@ Access various useful links for CalcBot, such as online documentation or CalcBot
 
 # `c-matrix`
 
-A module for performing matrix math. Matrices should be inputted using the following syntax:
+A module for performing matrix math. A single matrix should be inputted using the following syntax:
 ```[<value>, <value>...] [<value>, <value>...] ...```
 Each set of values enclosed in brackets represents a row in the matrix.
 
 * **Shorthand**: `c-m`
 * **Aliases**: `matrix`, `mat`, `m`
+
+## `c-matrix determinant`
+
+Computes the determinant of a matrix.
+
+* **Shorthand**: `c-m det`
+* **Aliases**: `determinant`, `deter`, `det`
+* **Syntax**:
+	* `c-matrix determinant <row 1> <row 2>...`
+
+**Examples**:
+```
+c-matrix determinant [4, 5, 7, 1] [3, 1, 4, 2] [7, 6, 8, 5] [1, 8, 7, 8]
+```
 
 ## `c-matrix gaussian`
 
