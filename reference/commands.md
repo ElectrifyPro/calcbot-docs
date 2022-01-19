@@ -1229,6 +1229,20 @@ Performs gaussian elimination on the given matrix, and returns the result in red
 c-matrix gaussian [2, 1, 7] [3, -2, -7]
 ```
 
+## `c-matrix inverse`
+
+Computes the inverse of a matrix.
+
+* **Shorthand**: `c-m inv`
+* **Aliases**: `inverse`, `inv`
+* **Syntax**:
+	* `c-matrix inverse <row 1> <row 2>...`
+
+**Examples**:
+```
+c-matrix inverse [2, 5, 0, 8] [1, 4, 2, 6] [7, 8, 9, 3] [1, 5, 7, 8]
+```
+
 ## `c-matrix multiply`
 
 Multiplies two matrices.
