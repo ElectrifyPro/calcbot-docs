@@ -1217,7 +1217,7 @@ c-matrix determinant [4, 5, 7, 1] [3, 1, 4, 2] [7, 6, 8, 5] [1, 8, 7, 8]
 
 ## `c-matrix gaussian`
 
-Performs gaussian elimination on the given matrix, and returns the result in reduced row echelon form.
+Performs gaussian elimination on the given matrix, and returns the result in reduced row echelon form. This command can be used to find solutions to linear systems of equations.
 
 * **Shorthand**: `c-m gau`
 * **Aliases**: `gaussian`, `gauss`, `gau`
@@ -1241,6 +1241,20 @@ Multiplies two matrices.
 **Examples**:
 ```
 c-matrix multiply [[1, -2, 1] [2, 1, 3]] [[2, 1] [3, 2] [1, 1]]
+```
+
+## `c-matrix rowechelon`
+
+Reduces the matrix to row echelon form. If you would like the the **reduced** row echelon form instead, see the `c-matrix gaussian` command.
+
+* **Shorthand**: `c-m ech`
+* **Aliases**: `rowechelon`, `rowech`, `row`, `ech`
+* **Syntax**:
+	* `c-matrix rowechelon <row 1> <row 2>...`
+
+**Examples**:
+```
+c-matrix rowechelon [-4, 3, 3, 7] [8, 7, 3, -9] [4, 3, 3, 2] [7, 3, 1, 1]
 ```
 
 # `c-notmath`
