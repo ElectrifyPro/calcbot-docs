@@ -878,6 +878,24 @@ Permutations function. Computes the number of ways to obtain an ordered subset o
 
 ## Probability
 
+### normpdf\(x, m = 0, s = 1\)
+
+Normal probability density function. Note that the returned values do not represent actual probabilities; you might be looking for [**normcdf**](calculate.md#normcdfa-b-m--0-s--1).
+
+```text
+> c-c normpdf(0)
+0.398942280401432
+```
+
+### normcdf\(a, b, m = 0, s = 1\)
+
+Cumulative normal probability density function. Computes the probability of a normally distributed random variable, with mean `m` and standard deviation `s`, falling in the interval `a` to `b`.
+
+```text
+> c-c normcdf(-infinity, -2.9)
+0.001865813327129
+```
+
 ### geompdf\(p, n\)
 
 Geometric probability function. Computes the probability that the first success of an event, with success probability `p`, occurs on the `n`th trial.
