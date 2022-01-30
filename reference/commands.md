@@ -548,8 +548,8 @@ To approach infinity, type any of the following for the `approach` argument: `in
 
 To input piecewise functions, separate the `x` conditions and function body with a colon (`:`). The condition is associated with the next function (see examples, or head [here](https://chillant.gitbook.io/calcbot/calculate#piecewise-functions)).
 
-* **Shorthand**: `c-c l`
-* **Aliases**: `limit`, `lim`, `l`
+* **Shorthand**: `c-c lim`
+* **Aliases**: `limit`, `lim`
 * **Syntax**:
 	* `c-calculate limit <approach> <expression>`
 
