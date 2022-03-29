@@ -213,8 +213,8 @@ c-admin unmarkchannel #general
 
 This command functions the same as `c-report`, however your username will **not** be displayed in the #c-report channel on my [support server](https://discord.gg/3m7dK92).
 
-* **Shorthand**: `c-are`
-* **Aliases**: `anonreport`, `anonrep`, `arp`, `are`
+* **Shorthand**: `c-arp`
+* **Aliases**: `anonreport`, `anonrep`, `arp`
 * **Syntax**:
 	* `c-anonreport <message>`
 
@@ -483,6 +483,10 @@ c-calculate derivative x^2
 ## `c-calculate distancetravelled`
 
 Calculates the distance a function / expression in terms of `x` travels from `x = a` to `x = b`.
+
+Distance travelled measures the total change in the value of the function in the given interval; it's essentially the opposite of displacement.
+
+For example, the function `x^2` does not displace at all in the interval `x = -1` to `x = 1`, since the function starts and ends on the same spot (`y = 1`). However, the function travels a distance of two units in that interval: one unit from `x = -1` to `x = 0`, and one more unit from `x = 0` to `x = 1`.
 
 * **Shorthand**: `c-c dt`
 * **Aliases**: `distancetravelled`, `disttravelled`, `dt`
@@ -1799,8 +1803,8 @@ Set a reminder with an optional message that will be triggered at the specified 
 
 **Make sure that you have correctly set your time zone settings with the `c-settings` command, or this command will not function properly.**
 
-* **Shorthand**: `c-rem at`
-* **Aliases**: `at`
+* **Shorthand**: `c-rem @`
+* **Aliases**: `at`, `@`
 * **Syntax**:
 	* `c-remind at <hour>:<minute> [AM | PM] [message]`
 
@@ -1914,8 +1918,8 @@ View all of your active reminders.
 
 Make a request for a feature you want to see added to the bot, or report a bug with one of CalcBot's commands. Reports are publicly visible at my support server, [here](https://discord.gg/3m7dK92).
 
-* **Shorthand**: `c-re`
-* **Aliases**: `report`, `rep`, `rp`, `re`
+* **Shorthand**: `c-rp`
+* **Aliases**: `report`, `rep`, `rp`
 * **Syntax**:
 	* `c-report <message>`
 
