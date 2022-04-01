@@ -26,6 +26,8 @@ Get started by selecting one of the topics below, or scroll down a bit more to s
   * Vector3
     * [Reference](reference/vector3.md)
 
+You may view our Privacy Policy [here](privacy.md).
+
 ## Quick start
 
 ### Default prefix

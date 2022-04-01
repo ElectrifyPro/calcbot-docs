@@ -2,6 +2,7 @@
 
 * [CalcBot](README.md)
 * [Settings](settings.md)
+* [Privacy policy](privacy.md)
 
 ## Commands
 
