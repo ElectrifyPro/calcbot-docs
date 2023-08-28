@@ -1079,6 +1079,21 @@ Returns `n` rounded down to the next `s`, integer by default.
 0.4
 ```
 
+### trunc\(n, s = 1\)
+
+Returns `n` rounded towards 0 to the next `s`, integer by default. When `n` is positive, this is equivalent to `floor(n, s)`. When `n` is negative, this is equivalent to `ceil(n, s)`.
+
+```text
+> c-c trunc(4.9)
+4
+
+> c-c trunc(-5)
+-5
+
+> c-c trunc(-0.89, 0.14)
+-0.84
+```
+
 ### min\(a, b\)
 
 Returns the lesser value of `a` and `b`.
