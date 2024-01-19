@@ -2049,6 +2049,20 @@ The `calc_out` setting determines how results in `c-calculate` are formatted. Th
 * **Syntax**:
 	* `c-settings calcout <mode>`
 
+## `c-settings calcseparator`
+
+The `calc_separator` setting determines whether to display separators when displaying large numbers in `c-calculate`. These are the list of available modes:
+
+* `none` (default) - No separators are displayed
+* `sepr` - Separators are displayed
+
+**Your current setting**: `{setting}`
+
+* **Shorthand**: `c-set cs`
+* **Aliases**: `calcseparator`, `calcsep`, `csep`, `cs`
+* **Syntax**:
+	* `c-settings calcseparator <mode>`
+
 ## `c-settings locale`
 
 The `locale` setting determines how dates (in the `c-recollect` commands) are rendered. The default is `en-US`, signifying the English language as used in the USA. Here are examples and useful links to find your specific locale:
@@ -2080,7 +2094,7 @@ The `time_zone` setting is used to provide the time in the `c-clock` command and
 
 # `c-unitconvert`
 
-Convert a quantity from one unit / ratio to another.
+Convert a quantity from one unit / ratio to another. You can specify multiple target units to convert to (see examples).
 CalcBot supports server-unique and user-unique custom ratios; run `c-unitconvert customratio` for more info.
 Run `c-unitconvert units` to see a list of supported units.
 
@@ -2089,12 +2103,13 @@ Run `c-unitconvert units` to see a list of supported units.
 * **Shorthand**: `c-uc`
 * **Aliases**: `unitconvert`, `unco`, `uc`
 * **Syntax**:
-	* `c-unitconvert <quantity> <unit | ratio> <to unit | ratio>`
+	* `c-unitconvert <quantity> <unit | ratio> <target unit... | ratio...>`
 
 **Examples**:
 ```
 c-unitconvert 18 sec min
 c-unitconvert 14 mi/hr km/sec
+c-unitconvert 32 F C K
 ```
 
 ## `c-unitconvert customratio`
