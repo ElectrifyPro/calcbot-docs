@@ -671,7 +671,7 @@ Computes various descriptive statistics for two or more numbers, including the m
 ```
 c-calculate stats 1 2 4 5
 c-calculate stats 3*6 11/2 5 5 100/9
-c-calculate stats 1, 2, 5, 8, 9, 9, 40
+c-calculate stats 1 2 5 8 9 9 40
 ```
 
 ## `c-calculate systemequations`
@@ -741,6 +741,28 @@ Display all variables and functions defined in `c-calculate`.
 
 * **Shorthand**: `c-c v`
 * **Aliases**: `variables`, `functions`, `funcs`, `vars`, `v`
+
+# `c-calculatetest`
+
+Evaluates a given expression, like `1 + 1`, using `cas-rs`, a major upgrade to the evaluation engine.
+
+Learn more about it here: [`cas-rs`](https://github.com/ElectrifyPro/cas-rs/tree/dev).
+
+* **Shorthand**: `c-ct`
+* **Aliases**: `calculatetest`, `cc`, `ct`
+* **Syntax**:
+	* `c-calculatetest <expression>...`
+
+**Examples**:
+```
+c-calculatetest 1+1
+c-calculatetest x=2
+c-calculatetest 5sin(pi/2)
+c-calculatetest 6!
+c-calculatetest f(x)=x^2+5x+6
+c-calculatetest f(2)
+c-calculatetest cos'(0)
+```
 
 # `c-chemistry`
 
