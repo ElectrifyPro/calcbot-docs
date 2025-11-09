@@ -25,6 +25,8 @@ Get started by selecting one of the topics below, or scroll down a bit more to s
     * [Reference](reference/vector2.md)
   * Vector3
     * [Reference](reference/vector3.md)
+* **CalcBot development preview**
+  * [Introduction](preview/introduction.md)
 
 You may view our Privacy Policy [here](privacy.md).
 

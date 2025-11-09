@@ -4,6 +4,11 @@
 * [Settings](settings.md)
 * [Privacy policy](privacy.md)
 
+## CalcBot development preview
+
+* [Introduction](preview/introduction.md)
+* [c-calculate](preview/cas.md)
+
 ## Commands
 
 * [Command system](commands/command-system.md)
